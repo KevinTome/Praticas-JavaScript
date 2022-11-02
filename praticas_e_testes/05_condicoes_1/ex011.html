@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSAPORTE</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidades</h1>
+    Seu pais de origem: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+
+    <script>
+        function calcular() {
+            var txtn = document.querySelector('input#txtnac')
+            var res = document.querySelector('div#res')
+            var nacao = String(txtn.value)
+
+            res.innerHTML = `<p>Seu pais de origem é o(a) ${nacao}.</p>`
+            if (nacao != 'Brasil'){
+                res.innerHTML += `<p>Bem vindo, estrangeiro(a)!</p>`
+            } else {
+                res.innerHTML += `<p>Bem vindo, brasileiro(a)!.</p>`
+            }
+                        
+        }
+    </script>
+</body>
+</html>
