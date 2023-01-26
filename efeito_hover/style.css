@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    background-color: darkblue;
+}
+
+h1{
+    font-size: 4rem;
+    font-family: system-ui, sans-serif;
+    margin-top: 100px;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: default;
+}
+
+h1::before{
+    content: "";
+    background-color: blueviolet;
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transition: transform 300ms ease;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+h1:hover::before{
+    transform: scaleX(1);
+}
