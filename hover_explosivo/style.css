@@ -1,0 +1,83 @@
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: azure;
+}
+
+.container-principal{
+    margin: 0 auto;
+    /* height: 100vp; */
+    border: 3px solid azure;
+    border-radius: 20px;
+    padding: 20px;
+    width: 75%;
+}
+
+.container-principal .line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-principal .line p{
+    color: azure;
+    font-size: 8vw;
+    font-family: "Rubik", sans-serif;
+    margin: 0rem;
+    text-transform: uppercase;
+}
+
+.container-principal:has(.fancy:hover) .word:not(.fancy:hover){
+    color: #f0ffff2b;
+}
+
+.fancy > .letter{
+    display: inline-block;
+    transition: transform 350ms ease;
+}
+
+.fancy:hover > .letter{
+    transition-duration: 800ms;
+}
+
+.fancy:hover > .letter:nth-child(22){
+    transform: translate(-80%, 60%) rotate(8deg);
+    color: blue;
+}
+.fancy:hover > .letter:nth-child(23){
+    transform: translate(-40%, -20%) rotate(4deg);
+    color: darkblue;
+}
+.fancy:hover > .letter:nth-child(24){
+    transform: translate(-10%, 60%) rotate(-6deg);
+    color: darkorchid;
+}
+.fancy:hover > .letter:nth-child(25){
+    transform: translate(0%, 8%) rotate(-8deg);
+    color: blueviolet;
+}
+.fancy:hover > .letter:nth-child(26){
+    transform: translate(0%, -20%) rotate(5deg);
+    color: darkmagenta;
+}
+.fancy:hover > .letter:nth-child(27){
+    transform: translate(0%, 20%) rotate(-3deg);
+    color: beige;
+}
+.fancy:hover > .letter:nth-child(28){
+    transform: translate(10%, -40%) rotate(-5deg);
+    color: darkgreen;
+}
+.fancy:hover > .letter:nth-child(29){
+    transform: translate(40%, 15%) rotate(10deg);
+    color: brown;
+}
+.fancy:hover > .letter:nth-child(30){
+    transform: translate(80%, 50%) rotate(8deg);
+    color: burlywood;
+}
+
